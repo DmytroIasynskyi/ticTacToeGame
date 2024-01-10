@@ -6,7 +6,7 @@ function Board() {
   const key = 'squares';
   const [squares, setSquares] = useState(() => {
     const valueInStorage = window.localStorage.getItem(key);
-    if (typeof valueInStorage === 'string') return JSON.parse(window.localStorage.getItem(key));
+    if (typeof valueInStorage === 'string') return JSON.parse(valueInStorage);
     return initialSquares;
   });
 
