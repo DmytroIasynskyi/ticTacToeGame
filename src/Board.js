@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Board = ({ squares, onClick}) => {
+const Board = ({ squares, selectSquare}) => {
     return (
         <div>
             <div className="board-row">
@@ -23,7 +23,7 @@ const Board = ({ squares, onClick}) => {
 
     function renderSquare(i) {
         return (
-            <button className="square" onClick={() => onClick(i)}>
+            <button className="square" onClick={() => selectSquare(i)}>
                 {squares[i]}
             </button>
         )
